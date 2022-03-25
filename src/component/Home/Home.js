@@ -5,14 +5,17 @@ import { foodSidebar } from "../userContext/foodSidebar";
 import { userContext } from "../userContext/userContext";
 import "./Home.css";
 const Home = () => {
+  // this context api data loaded database
   const [foods, setUsers] = useContext(userContext);
+  // this context api and data shere RightSidebar Component
   const [sidebarFood, setFood] = useContext(foodSidebar);
 
   const handleOrder = (food) => {
+    //   repeted food item error fixt
     const repetfood = sidebarFood.filter((item) => {
       return item.id === food.id;
     });
-    // console.log(repetfood.length);
+
     // this condition check food id Whether there is before
     //if false into this condition then true id change useing randome number
     if (repetfood.length === 0) {
