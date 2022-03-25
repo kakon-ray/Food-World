@@ -1,14 +1,40 @@
 import React, { useContext, useState } from "react";
 import FoodCard from "../Card/FoodCard";
 import RightSidebar from "../RightSidebar/RightSidebar";
+import { foodSidebar } from "../userContext/foodSidebar";
 import { userContext } from "../userContext/userContext";
 import "./Home.css";
 const Home = () => {
   const [foods, setUsers] = useContext(userContext);
-  const [sidebarFood, setSidebarFood] = useState([]);
+  const [sidebarFood, setFood] = useContext(foodSidebar);
 
   const handleOrder = (food) => {
-    setSidebarFood(food);
+    const repetfood = sidebarFood.filter((item) => {
+      return item.id === food.id;
+    });
+    // console.log(repetfood.length);
+    // this condition check food id Whether there is before
+    //if false into this condition then true id change useing randome number
+    if (repetfood.length === 0) {
+      setFood([
+        ...sidebarFood,
+        {
+          name: food.name,
+          img: food.img,
+          id: food.id,
+        },
+      ]);
+    } else if (repetfood.length > 0) {
+      let value2 = Math.random() * 2.5;
+      setFood([
+        ...sidebarFood,
+        {
+          name: food.name,
+          img: food.img,
+          id: parseInt(food.id) + value2,
+        },
+      ]);
+    }
   };
 
   return (
@@ -29,7 +55,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <RightSidebar sidebarFood={sidebarFood} />
+        <RightSidebar />
       </div>
     </div>
   );

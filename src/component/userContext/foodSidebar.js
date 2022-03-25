@@ -1,19 +1,13 @@
-import React, { useState, createContext, useEffect } from "react";
+import React, { useState, createContext } from "react";
 
-export const userContext = createContext();
+export const foodSidebar = createContext();
 
-export const UserProvider = (props) => {
+export const FoodProvider = (props) => {
   const [state, setState] = useState([]);
 
-  useEffect(() => {
-    fetch("products.json")
-      .then((response) => response.json())
-      .then((data) => setState(data));
-  }, []);
-
   return (
-    <userContext.Provider value={[state, setState]}>
+    <foodSidebar.Provider value={[state, setState]}>
       {props.children}
-    </userContext.Provider>
+    </foodSidebar.Provider>
   );
 };
