@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Seafood",
+    "img": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Miscellaneous",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Pasta",
+    "img": "https://image.shutterstock.com/image-photo/table-food-top-view-260nw-467823860.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Breakfast",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2HMQ9i4tAJlu8zCxptVtaIB1uy3RHljPtlQ&usqp=CAU"
+  }
+]
