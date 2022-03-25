@@ -17,7 +17,7 @@ const Home = () => {
     });
 
     // this condition check food id Whether there is before
-    //if false into this condition then true id change useing randome number
+    //if false into this condition then true then do not add food
     if (repetfood.length === 0) {
       setFood([
         ...sidebarFood,
@@ -28,15 +28,6 @@ const Home = () => {
         },
       ]);
     } else if (repetfood.length > 0) {
-      let value2 = Math.random() * 2.5;
-      setFood([
-        ...sidebarFood,
-        {
-          name: food.name,
-          img: food.img,
-          id: parseInt(food.id) + value2,
-        },
-      ]);
     }
   };
 
