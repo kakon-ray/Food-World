@@ -1,4 +1,9 @@
 .sidebar {
   background-color: rgb(163, 163, 163);
   height: 100vw;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
 }

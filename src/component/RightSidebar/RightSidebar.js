@@ -71,10 +71,10 @@ const RightSidebar = () => {
       </div>
 
       <div className="d-flex justify-content-center">
-        <Button variant="outline-info m-1" onClick={() => randomFood()}>
+        <Button variant="outline-light m-1" onClick={() => randomFood()}>
           Choose 1 For Me
         </Button>
-        <Button variant="outline-info m-1" onClick={clearFood}>
+        <Button variant="outline-light m-1" onClick={clearFood}>
           Choose Again
         </Button>
       </div>
