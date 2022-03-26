@@ -5,6 +5,7 @@ import { foodSidebar } from "../userContext/foodSidebar";
 import { userContext } from "../userContext/userContext";
 import "./Home.css";
 import { toast } from "react-toastify";
+import QuestionAns from "../QuestionAns/QuestionAns";
 
 const Home = () => {
   // this context api data loaded database
@@ -57,6 +58,20 @@ const Home = () => {
         <div className="sidebar col-md-4 col-sm-12">
           <RightSidebar />
         </div>
+      </div>
+      <div className="row my-4 g-3">
+        <QuestionAns
+          title="How React Work ?"
+          description="React is JavaScript  Library.React js use to create fornt end web application and user interface.React work one way data binding. This means parent component share data to child component.Child component do not shre data parent component use props.If any person shere data child component to parent componet to use React hooks,context api and mathod paramiter"
+        />
+        <QuestionAns
+          title="Difference between props and state ?"
+          description="Props use shere data component to another component. Useing props shere data child component to parent component.State work change data in user interface. State change data user responce but props does not chnage valu.If ever props value change react gives a error."
+        />
+        <QuestionAns
+          title="How useState work ? "
+          description="useState is react hook in function component.useState hooks work to state change.if ever change state in function component react js then need to useState hooks"
+        />
       </div>
     </div>
   );

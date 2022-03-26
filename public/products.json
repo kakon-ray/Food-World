@@ -48,5 +48,15 @@
     "id": 10,
     "name": "Biryani",
     "img": "https://thumbs.dreamstime.com/b/chicken-biryani-traditional-indian-rice-dish-served-clay-pot-top-view-image-one-meal-108805407.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Bangladeshi Rice",
+    "img": "https://lh3.googleusercontent.com/zxIgktwDbcLq_6HIyPHhjQj09kWYEw2vEPgRDEbZoN6is0314Ss5-vAh_u8vLXvyhD8OV0cJwtbSxbgZBfjZJwxM37vG_I7pIEJSaCaZBA=s750"
+  },
+  {
+    "id": 12,
+    "name": "Khulna Biryani",
+    "img": "https://thumbs.dreamstime.com/b/chicken-biryani-traditional-indian-rice-dish-served-clay-pot-top-view-image-one-meal-108805407.jpg"
   }
 ]
