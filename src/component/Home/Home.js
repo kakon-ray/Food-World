@@ -4,6 +4,8 @@ import RightSidebar from "../RightSidebar/RightSidebar";
 import { foodSidebar } from "../userContext/foodSidebar";
 import { userContext } from "../userContext/userContext";
 import "./Home.css";
+import { toast } from "react-toastify";
+
 const Home = () => {
   // this context api data loaded database
   const [foods, setUsers] = useContext(userContext);
@@ -18,7 +20,7 @@ const Home = () => {
 
     // this condition check food id Whether there is before
     //if false into this condition then true then do not add food
-    if (repetfood.length === 0) {
+    if (repetfood.length === 0 && sidebarFood.length < 4) {
       setFood([
         ...sidebarFood,
         {
@@ -28,6 +30,9 @@ const Home = () => {
         },
       ]);
     } else if (repetfood.length > 0) {
+      toast.error("You do not repeat one item more time");
+    } else if (sidebarFood.length > 3) {
+      toast.error("You do not add more then four item");
     }
   };
 
