@@ -1,4 +1,9 @@
-.card .btn {
+/* .card .btn {
   border: none;
   box-shadow: none;
+} */
+
+.random-food {
+  background-color: rgb(163, 163, 163);
+  border: none;
 }

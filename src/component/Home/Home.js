@@ -39,6 +39,8 @@ const Home = () => {
 
   return (
     <div className="container mt-4">
+      <h1 className="text-center text-info">Bangla Food</h1>
+      <p className="text-center">Choose 4 Item</p>
       <div className="row">
         <div className="col-md-8 col-sm-12">
           <div className="row g-2">
@@ -47,6 +49,7 @@ const Home = () => {
                 <FoodCard
                   id={food.id}
                   name={food.name}
+                  price={food.price}
                   img={food.img}
                   food={food}
                   handleOrder={handleOrder}

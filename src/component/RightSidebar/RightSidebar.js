@@ -20,11 +20,11 @@ const RightSidebar = () => {
       const newRandomFood =
         sidebarFood[Math.floor(Math.random() * sidebarFood.length + 1)];
 
-      if (newRandomFood != undefined) {
+      if (newRandomFood !== undefined) {
         setRandomFood(newRandomFood);
-      } else if (newRandomFood == undefined) {
+      } else if (newRandomFood === undefined) {
         let random = sidebarFood.find((item, indx) => {
-          return indx == Math.floor(Math.random() * sidebarFood.length);
+          return sidebarFood[Math.floor(Math.random() * sidebarFood.length)];
         });
         setRandomFood(random);
       }
@@ -36,11 +36,11 @@ const RightSidebar = () => {
   };
   return (
     <div>
-      <h1 className="text-center pt-3">Selected Food</h1>
+      <h1 className="text-center pt-3 text-light">Selected Food</h1>
       {sidebarFood.map((food) => (
         <React.Fragment key={food.id}>
           <Card className="my-1 card">
-            <Card.Body className="d-flex align-items-center">
+            <Card.Body className="d-flex align-items-center justify-content-between">
               <img
                 src={food.img ? food.img : ""}
                 alt="Food"
@@ -50,7 +50,6 @@ const RightSidebar = () => {
 
               <Button variant="">
                 <FontAwesomeIcon
-                  className="ms-4"
                   icon={faTrash}
                   onClick={() => handleRemove(food.id)}
                 />
@@ -61,9 +60,9 @@ const RightSidebar = () => {
       ))}
 
       <div className="mt-5">
-        <h2 className="text-center">Tasty Food Choose </h2>
+        <h2 className="text-center text-light">Tasty Food Choose </h2>
 
-        <Card className="my-1 card">
+        <Card className="my-1 card random-food">
           <Card.Body className="d-flex align-items-center">
             <img src={randomOneFood?.img} alt="" style={{ width: "100px" }} />
             <h4 className="ps-2">{randomOneFood?.name}</h4>

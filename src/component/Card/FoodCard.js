@@ -3,15 +3,18 @@ import { Card, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-const FoodCard = ({ name, img, id, handleOrder, food }) => {
+const FoodCard = ({ name, img, id, handleOrder, food, price }) => {
   return (
     <div className="col-md-4" key={id}>
       <Card style={{ minWidth: "15rem" }} className="text-center">
         <Card.Img variant="top" src={img} style={{ height: "250px" }} />
         <Card.Body>
-          <Card.Title>{name}</Card.Title>
+          <Card.Title>
+            {name}
+            <span className="ms-2">{price}</span>
+          </Card.Title>
 
-          <Button variant="light" onClick={() => handleOrder(food)}>
+          <Button variant="outline-info" onClick={() => handleOrder(food)}>
             Order Now
             <FontAwesomeIcon className="ms-2" icon={faShoppingCart} />
           </Button>
