@@ -14,20 +14,22 @@ const RightSidebar = () => {
     setFood([...newUser]);
   };
 
+  // this mathod random food calculation
   const randomFood = () => {
-    const newRandomFood =
-      sidebarFood[Math.floor(Math.random() * sidebarFood.length + 1)];
+    if (sidebarFood.length > 0) {
+      const newRandomFood =
+        sidebarFood[Math.floor(Math.random() * sidebarFood.length + 1)];
 
-    if (newRandomFood != undefined) {
-      setRandomFood(newRandomFood);
-    } else {
-      let random = sidebarFood.find((item, indx) => {
-        return indx == Math.floor(Math.random() * sidebarFood.length + 1);
-      });
-      setRandomFood(random);
+      if (newRandomFood != undefined) {
+        setRandomFood(newRandomFood);
+      } else if (newRandomFood == undefined) {
+        let random = sidebarFood.find((item, indx) => {
+          return indx == Math.floor(Math.random() * sidebarFood.length);
+        });
+        setRandomFood(random);
+      }
     }
   };
-  console.log(randomOneFood);
 
   const clearFood = () => {
     setFood([]);
@@ -57,6 +59,17 @@ const RightSidebar = () => {
           </Card>
         </React.Fragment>
       ))}
+
+      <div className="mt-5">
+        <h2 className="text-center">Tasty Food Choose </h2>
+
+        <Card className="my-1 card">
+          <Card.Body className="d-flex align-items-center">
+            <img src={randomOneFood?.img} alt="" style={{ width: "100px" }} />
+            <h4 className="ps-2">{randomOneFood?.name}</h4>
+          </Card.Body>
+        </Card>
+      </div>
 
       <div className="d-flex justify-content-center">
         <Button variant="outline-info m-1" onClick={() => randomFood()}>
