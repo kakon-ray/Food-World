@@ -39,8 +39,8 @@ const Home = () => {
   return (
     <div className="container mt-4">
       <div className="row">
-        <div className="col-8">
-          <div className="row g-3">
+        <div className="col-md-8 col-sm-12">
+          <div className="row g-2">
             {foods.map((food) => (
               <React.Fragment key={food.id}>
                 <FoodCard
@@ -54,7 +54,9 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <RightSidebar />
+        <div className="sidebar col-md-4 col-sm-12">
+          <RightSidebar />
+        </div>
       </div>
     </div>
   );

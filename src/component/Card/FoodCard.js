@@ -6,7 +6,7 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 const FoodCard = ({ name, img, id, handleOrder, food }) => {
   return (
     <div className="col-md-4" key={id}>
-      <Card style={{ width: "15rem" }} className="text-center">
+      <Card style={{ minWidth: "15rem" }} className="text-center">
         <Card.Img variant="top" src={img} style={{ height: "250px" }} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>

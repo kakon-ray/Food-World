@@ -35,8 +35,8 @@ const RightSidebar = () => {
     setFood([]);
   };
   return (
-    <div className="sidebar col-4">
-      <h1 className="text-center mb-3">Selected Food</h1>
+    <div>
+      <h1 className="text-center pt-3">Selected Food</h1>
       {sidebarFood.map((food) => (
         <React.Fragment key={food.id}>
           <Card className="my-1 card">
