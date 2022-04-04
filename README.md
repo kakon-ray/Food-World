@@ -1,3 +1,3 @@
-# Bangla Food
+# Pandamart
 
-## [Bangla Food Live Link](https://bangla-food-react.netlify.app/).
+## [Pandamart](https://bangla-food-react.netlify.app/).
